@@ -1,12 +1,10 @@
+// App.tsx
+import React from 'react';
+import Routing from '../Routing'; // Import your Routing component
 
-
-function App() {
-
+export default function App() {
   return (
-    <div>
-      Home
-    </div>
-  )
+    // AuthProvider and Router are in main.tsx, so no need here.
+    <Routing />
+  );
 }
-
-export default App
