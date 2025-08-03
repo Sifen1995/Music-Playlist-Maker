@@ -1,0 +1,37 @@
+.bg{
+    background-image: url(../assets/bg.png);
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center; 
+   width: 100vw;   
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+}
+
+hr{
+   margin-bottom: 30px; 
+   }
+.welcome{
+    font-size: 48px;
+    font-weight: 700;
+}   
+.field{
+    border: solid 1px;
+    margin-bottom: 15px;
+    padding: 10px;
+   background-color: #ecebeb;
+   border-radius: 5px;
+   border-color: gray;
+}
+.login{
+   border: none; 
+   padding: 7px;
+   margin-top: 15px;
+   margin-bottom: 30px;
+   width: 270px;
+   border-radius: 5px;
+   background-color: #EC4C7D;
+   color: white;
+}
