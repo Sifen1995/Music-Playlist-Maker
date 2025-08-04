@@ -8,6 +8,7 @@ import LandingPage from './src/pages/Landing/Landing';
 import LoginPage from './src/pages/login/Login';
 import DashboardPage from './src/pages/dashboard/DashboardPage';
 import SignUp from './src/pages/signup/SignUp';
+import PlaylistDetailPage from './src/components/PlaylistDetailPage';
 
 
 export default function AppRouter() {
@@ -46,6 +47,8 @@ export default function AppRouter() {
             </ProtectedRoute>
           }
         />
+
+        <Route path="/playlist/:playlistId" element={<PlaylistDetailPage />} />
 
         {/* 404 fallback */}
         {/* <Route path="*" element={<NotFound />} /> */}
