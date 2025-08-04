@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { auth } from '../../../utility/firebase'
 import { signOut } from 'firebase/auth'
+import PlaylistGrid from '../../components/PlaylistGrid'
+import CreatePlaylist from '../../components/createPlaylist'
 
 export default function DashboardPage() {
   const navigate = useNavigate();
@@ -14,6 +16,11 @@ export default function DashboardPage() {
       console.error('Error signing out:', error);
     }
   };
+
+  const [Modal, setShowModal] = useState<boolean>(false);
+
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
   return (
     <div>
@@ -28,12 +35,18 @@ export default function DashboardPage() {
        </header>
        <div className='mt-[40px] flex flex-row gap-[760px] ml-6 mr-6'>
          <h1 className='text-[48px] font-semibold'>Your playlists</h1>
-         <button className='border-none bg-amber-500 w-[100px] h-[50px] text-[14px] rounded-[10px] mt-3'>Create New Playlist</button>
+         <button className='border-none bg-amber-500 w-[100px] h-[50px] text-[14px] rounded-[10px] mt-3 ' onClick={openModal}>Create New Playlist</button>
+       </div>
+       
+       <div>
+         <PlaylistGrid/>
        </div>
 
-       <div>
-         cards
-       </div>
+        {Modal && (
+          <div><CreatePlaylist/></div>
+        )}
     </div>
   )
 }
+
+

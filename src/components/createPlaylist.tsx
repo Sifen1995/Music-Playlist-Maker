@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function createPlaylist() {
+export default function CreatePlaylist() {
+
   return (
     <div>
        <div className='max-w-[700px] max-h-[300px] bg-amber-100 rounded-[15px] p-3'>
@@ -14,3 +15,5 @@ export default function createPlaylist() {
     </div>
   )
 }
+
+
