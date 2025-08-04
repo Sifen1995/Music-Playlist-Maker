@@ -1,44 +1,44 @@
 import { useEffect, useState } from "react";
 import Routing from '../Routing'; // Import your Routing component
 
-type Track = {
-  id: number;
-  name: string;
-  track: number;
-  audio: string;
-  genre: string;
-};
+// type Track = {
+//   id: number;
+//   name: string;
+//   track: number;
+//   audio: string;
+//   genre: string;
+// };
 
-function App() {
+export default function App() {
 
-  const [tracks, setTracks] = useState<Track[]>([]);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  // const [tracks, setTracks] = useState<Track[]>([]);
+  // const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  useEffect(() => {
-    fetch("/src/dummyfile.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setTracks(data);
+  // useEffect(() => {
+  //   fetch("/src/dummyfile.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setTracks(data);
 
-      })
-      .catch((err) => console.error("Failed to load tracks", err));
-  }, []);
+  //     })
+  //     .catch((err) => console.error("Failed to load tracks", err));
+  // }, []);
 
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? tracks.length - 1 : prev - 1));
-  };
+  // const handlePrev = () => {
+  //   setCurrentIndex((prev) => (prev === 0 ? tracks.length - 1 : prev - 1));
+  // };
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === tracks.length - 1 ? 0 : prev + 1));
-  };
-  const currentTrack = tracks[currentIndex];
+  // const handleNext = () => {
+  //   setCurrentIndex((prev) => (prev === tracks.length - 1 ? 0 : prev + 1));
+  // };
+  // const currentTrack = tracks[currentIndex];
 
 
 
   return (
     <>
-      <div className="flex w-[500px] justify-center items-center h-screen m-auto">
+      {/* <div className="flex w-[500px] justify-center items-center h-screen m-auto">
         <div>
           <h1 className="text-center">Music Playlist</h1>
           {tracks.length > 0 &&
@@ -59,7 +59,7 @@ function App() {
             </div>
           }
         </div>
-      </div>
+      </div> */}
       <Routing />
     </>
   )
