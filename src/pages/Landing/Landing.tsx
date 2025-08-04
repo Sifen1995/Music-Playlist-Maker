@@ -39,12 +39,11 @@ export default function Landing() {
     navigate('/dashboard')
   }
 
-  console.log("hljhl")
   return (
     <div>
       {/* The outer div wrapping the banner is not strictly necessary unless you have other content */}
       <div>
-        <div className={Style.banner}>
+        <div className={`${Style.banner}`} >
           <p>Craft Your Sound. Your Way.</p>
           <button className='mt-[30px] text-white bg-amber-800 border-none rounded-[10px] w-[150px] p-2  font-bold relative z-10' onClick={playlist}>Go to my playlist</button>
         
@@ -57,22 +56,22 @@ export default function Landing() {
         <button onClick={() => console.log('clicked')}>Click me</button> */}
         {/* Music Player */}
           {tracks.length > 0 && (
-            <div className='flex w-[200px] items-center '>
+            <div className=' w-[300px] md:w-[400px] mx-auto '>
               <div>
                 {/* <h1 className="text-center">Music Playlist</h1> */}
-                <div className="bg-orange-300 py-4 px-8 rounded-4xl mt-5">
-                  <h3>Track {currentTrack.track}</h3>
+                <div className="bg-orange-300 py-4 px-4 md:px-8 rounded-4xl mt-5">
+                  <h3 className='font-semibold'>Track {currentTrack.track}</h3>
                   <div className="flex gap-2">
-                    <button onClick={handlePrev}>Prev</button>
+                    <button className='hover:text-gray-700 hover:cursor-pointer' onClick={handlePrev}>Prev</button>
                     <audio controls src={currentTrack.audio} autoPlay />
-                    <button onClick={handleNext}>Next</button>
+                    <button className='hover:text-gray-700 hover:cursor-pointer' onClick={handleNext}>Next</button>
                   </div>
                   <div className="flex justify-between">
-                    <div>
-                      <h3>Artist: {currentTrack.name}</h3>
-                      <h3>Genre: {currentTrack.genre}</h3>
+                    <div className='text-sm'>
+                      <h3 className='font-semibold'>Artist: <i className='font-normal'>{currentTrack.name}</i></h3>
+                      <h3 className='font-semibold'>Genre: <i className='font-normal'>{currentTrack.genre}</i></h3>
                     </div>
-                    <button>Add to fav</button>
+                    <button className='hover:text-gray-700 hover:cursor-pointer'>Add to playlist</button>
                   </div>
                 </div>
               </div>

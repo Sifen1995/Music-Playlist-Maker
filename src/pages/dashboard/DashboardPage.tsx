@@ -7,7 +7,7 @@ import { db } from '../../../utility/firebase'; // Assuming 'db' is your Firesto
 import { collection, addDoc, query, where, getDocs } from 'firebase/firestore';
 
 
-interface Playlist {
+export interface Playlist {
   id: string;
   name: string;
   description: string;
@@ -88,7 +88,7 @@ export default function DashboardPage() {
     };
     fetchPlaylists();
   }, [user]); 
-
+  
   return (
     <div>
       <header></header>
