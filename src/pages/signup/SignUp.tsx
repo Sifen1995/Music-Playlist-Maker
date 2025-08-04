@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
 import Style from './signup.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {auth} from '../../../utility/firebase'
 import {createUserWithEmailAndPassword} from 'firebase/auth'
 
 export default function SignUp() {
 
-   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState<boolean>(false);
     const handleToggleShowPassword = () => {
     setShowPassword(prevShowPassword => !prevShowPassword); // Toggle the state
   };
@@ -21,8 +22,10 @@ export default function SignUp() {
    
    createUserWithEmailAndPassword(auth,email,password).then((userInfo)=>{
     console.log(userInfo)
+    navigate('/dashboard') // Navigate to dashboard after successful signup
    }).catch((err)=>{
     console.log(err)
+    setError(err.message)
    })
   }
   return (
