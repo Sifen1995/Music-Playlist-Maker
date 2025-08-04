@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
 import Style from './login.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {auth} from '../../../utility/firebase'
 import {signInWithEmailAndPassword} from 'firebase/auth'
 
 
 export default function Login() {
 
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const handleToggleShowPassword = () => {
   setShowPassword(prevShowPassword => !prevShowPassword); 
@@ -22,8 +23,10 @@ const authHandeler=(e: any)=>{
 
   signInWithEmailAndPassword(auth,email,password).then((userInfo)=>{
     console.log(userInfo)
+    navigate('/dashboard') // Navigate to dashboard after successful login
   }).catch((err)=>{
     console.log(err)
+    setError(err.message)
   })
  
 }
