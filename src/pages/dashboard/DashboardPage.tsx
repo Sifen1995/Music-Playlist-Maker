@@ -113,11 +113,11 @@ export default function DashboardPage() {
   };
 
   return (
-    <div>
+    <div >
       <Navigation />
-      <div className='mt-[80px] flex flex-row gap-[760px] ml-6 mr-6'>
-        <h1 className='text-[48px] font-semibold'>Your playlists</h1>
-        <button className='border-none bg-amber-500 w-[100px] h-[50px] text-[14px] rounded-[10px] mt-3 ' onClick={openModal}>Create New Playlist</button>
+      <div className='container mx-auto mt-[80px] flex items-center justify-between  ml-6 mr-6'>
+        <h1 className='text-md md:text-[28px] font-semibold'>Your playlists</h1>
+        <button className='border-none bg-amber-500 w-[100px] h-[50px] text-[14px] rounded-[10px] mt-3 mr-3 ' onClick={openModal}>Create New Playlist</button>
       </div>
 
       <div>

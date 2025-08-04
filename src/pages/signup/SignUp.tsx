@@ -32,18 +32,18 @@ export default function SignUp() {
   return (
    <div className={Style.bg} >
      <Navigation />
-     <div className="bg-white p-4  rounded-[15px] shadow-xl max-w-[330px] w-full   h-[650px]  flex flex-col md:flex-row md:max-w-[1040px] md:ml-[10%] md:mr-[10%] md:max-h-[587px] mt-16">
-      <section className='md:p-[14%] '  >
-       <p className="font-[700] text-[48px] mb-[15px] md:mt-[50%]" >Taskify</p>
-      </section>
-       <div className="hidden md:flex items-center justify-center"> 
-    <div className="w-px bg-gray-300 h-[85%] mx-4"></div> 
-  </div>
-      <hr  />
-      <section className='md:ml-5 '>
-        <div>
-         <p className={Style.welcome}>Welcom </p>
-         <small className='text-[17px]'>Enter your info to get started with taskify </small>
+      <div className="bg-white p-4 mt-[] rounded-[15px] shadow-xl max-w-[330px] w-full   h-[650px]  flex flex-col md:flex-row md:max-w-[1040px] md:ml-[10%] md:mr-[10%] md:max-h-[587px] mt-44">
+        <section className='md:p-[14%] '  >
+          <p className="font-[700] mb-[30px] md:mt-[50%]" >Musically</p>
+        </section>
+        <div className="hidden md:flex items-center justify-center">
+          <div className="w-px bg-gray-300 h-[85%] mx-4"></div>
+        </div>
+        <hr />
+        <section className='md:ml-5 '>
+          <div>
+            <p className='text-lg font-bold'>Welcome</p>
+         <small className='text-[17px]'>Enter your info to get started with Musically </small>
         </div>
         <form action="" method="post" className='mt-[30px] ml-2'>
           <input type="text" name="name"  placeholder='Name'  size={30} className={Style.field}/> <br />

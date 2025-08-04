@@ -31,7 +31,7 @@ const PlaylistGrid: React.FC<PlaylistGridProps> = ({ playlists }) => {
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+    <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
       {playlists.map((playlist) => (
         // Add an onClick handler to the card or its container
         <div key={playlist.id} onClick={() => handlePlaylistClick(playlist.id)} className="cursor-pointer">
