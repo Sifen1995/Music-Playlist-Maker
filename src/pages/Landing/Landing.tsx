@@ -91,6 +91,7 @@ import AddToPlaylistModal from '../../components/AddToPlaylistModal';
 import { useAuth } from '../../components/dataprovider/AuthContext';
 import { db } from '../../../utility/firebase'; // Adjust this path if needed
 import { collection, query, where, getDocs } from 'firebase/firestore';
+import Navigation from '../../components/Navigation';
 
 type Track = {
   id: number;
@@ -169,14 +170,15 @@ export default function Landing() {
 
   return (
     <div>
+      <Navigation />
       <div>
-        <div className={`${Style.banner}`} >
-          <p className='text-sm'>Craft Your Sound. Your Way.</p>
+        <div className={`${Style.banner} mt-16`} >
+          <p className='text-lg text-white md:text-3xl'>Craft Your Sound. Your Way.</p>
           <button className='mt-[30px] text-white bg-amber-800 border-none rounded-[10px] w-[150px] p-2  font-bold relative z-10' onClick={playlist}>Go to my playlist</button>
         </div>
         
         {tracks.length > 0 && (
-          <div className=' w-[300px] md:w-[400px] mx-auto '>
+          <div className=' w-[300px] md:w-[400px] mx-auto mb-[100px]'>
             <div>
               <div className="bg-orange-300 py-4 px-4 md:px-8 rounded-4xl mt-5">
                 <h3 className='font-semibold'>Track {currentTrack.track}</h3>

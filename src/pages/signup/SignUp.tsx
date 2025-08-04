@@ -3,6 +3,7 @@ import Style from './signup.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 import {auth} from '../../../utility/firebase'
 import {createUserWithEmailAndPassword} from 'firebase/auth'
+import Navigation from '../../components/Navigation'
 
 export default function SignUp() {
 
@@ -30,7 +31,8 @@ export default function SignUp() {
   }
   return (
    <div className={Style.bg} >
-    <div className="bg-white p-4  rounded-[15px] shadow-xl max-w-[330px] w-full   h-[650px]  flex flex-col md:flex-row md:max-w-[1040px] md:ml-[10%] md:mr-[10%] md:max-h-[587px]">
+     <Navigation />
+     <div className="bg-white p-4  rounded-[15px] shadow-xl max-w-[330px] w-full   h-[650px]  flex flex-col md:flex-row md:max-w-[1040px] md:ml-[10%] md:mr-[10%] md:max-h-[587px] mt-16">
       <section className='md:p-[14%] '  >
        <p className="font-[700] text-[48px] mb-[15px] md:mt-[50%]" >Taskify</p>
       </section>

@@ -1,16 +1,17 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import PlaylistCard from './PlaylistCard';
+import type { PlaylistsType } from '../pages/dashboard/DashboardPage';
 
-interface Playlist {
-  id: string;
-  name: string;
-  imageUrl: string;
-  userId: string;
-}
+// interface Playlist {
+//   id: string;
+//   name: string;
+//   imageUrl: string;
+//   userId: string;
+// }
 
 interface PlaylistGridProps {
-  playlists: Playlist[];
+  playlists: PlaylistsType[];
 }
 
 const PlaylistGrid: React.FC<PlaylistGridProps> = ({ playlists }) => {

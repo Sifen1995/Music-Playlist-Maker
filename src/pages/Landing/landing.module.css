@@ -31,7 +31,7 @@
 }
 
 
-.banner p {
+/* .banner p {
   position: relative; 
   z-index: 2; 
   color: white; 
@@ -47,4 +47,4 @@
   @media (max-width: 480px) {
     font-size: 35px;
   }
-}
+} */

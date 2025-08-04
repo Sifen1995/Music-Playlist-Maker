@@ -3,6 +3,7 @@ import Style from './login.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 import {auth} from '../../../utility/firebase'
 import {signInWithEmailAndPassword} from 'firebase/auth'
+import Navigation from '../../components/Navigation'
 
 
 export default function Login() {
@@ -32,9 +33,10 @@ const authHandeler=(e: any)=>{
 }
   return (
     <div className={Style.bg} >
-    <div className="bg-white p-4  rounded-[15px] shadow-xl max-w-[330px] w-full   h-[650px]  flex flex-col md:flex-row md:max-w-[1040px] md:ml-[10%] md:mr-[10%] md:max-h-[587px]">
+      <Navigation />
+      <div className="bg-white p-4  rounded-[15px] shadow-xl max-w-[330px] w-full   h-[650px]  flex flex-col md:flex-row md:max-w-[1040px] md:ml-[10%] md:mr-[10%] md:max-h-[587px] mt-16">
       <section className='md:p-[14%] '  >
-       <p className="font-[700] text-[48px] mb-[30px] md:mt-[50%]" >Taskify</p>
+       <p className="font-[700] text-[48px] mb-[30px] md:mt-[50%]" >Musically</p>
       </section>
        <div className="hidden md:flex items-center justify-center"> 
     <div className="w-px bg-gray-300 h-[85%] mx-4"></div> 
@@ -42,7 +44,7 @@ const authHandeler=(e: any)=>{
       <hr  />
       <section className='md:ml-5 '>
         <div>
-         <p className={Style.welcome}>Welcom </p>
+         <p className={Style.welcome}>Welcome</p>
          <p className={Style.welcome}> Back</p>
          <small className='text-[14px]' >Enter your credential to continue</small>
         </div>
